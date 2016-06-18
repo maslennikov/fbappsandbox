@@ -12,7 +12,7 @@
   <div class="container">
     <img class="logo" src="/app-logo.png">
     <div>
-      <h1>Facebook-YT App Thingy</h1>
+      <h1>Little Yellow Button</h1>
     </div>
   </div>
 </div>
@@ -23,51 +23,36 @@
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <div id="player"></div>
 
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
+    <div
+        class="tym-clipit-button-small"
+        data-tym-playerid="tym-player-1"
+        data-tym-title="video title"
+        data-tym-tags="video,tags"
+        data-tym-categories="video,categories"
+        data-tym-permalink="http://my.link.tld/permalink.html"
+        data-tym-providerreference="hyUsWvHPO_M"
+        data-tym-providername="youtube"
+        data-tym-userid="b1008339-ab47-4c9d-8715-e6b3cc6c4511"
+       data-tym-language="en"></div>
 
+  </div>
+</div>
+
+<script>
+
+      var tag = document.createElement('script');
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
+          require(['scripts/app'], function() {
+              // Configuration loaded now, safe to do other require calls
+              // that depend on that config.
+          });
       }
     </script>
-
-  </div>
-</div>
+    <script src="//s3-eu-west-1.amazonaws.com/tym-dev/init.js" async defer></script>
 
 
 <script type="text/template" id="contestWidgetTpl">
