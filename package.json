@@ -1,0 +1,14 @@
+{
+  "name": "fbappsandbox",
+  "version": "0.1.0",
+  "description": "FB App POC",
+  "repository": "https://github.com/maslennikov/fbappsandbox",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3"
+  }
+}

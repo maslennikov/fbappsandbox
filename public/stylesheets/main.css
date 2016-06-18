@@ -1,0 +1,163 @@
+/* set a max-width for horizontal fluid layout and make it centered */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 760px; /* or 950px */
+}
+
+.hero {
+  background: #9ad0be;
+  background-image: url("../cover-bg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 4px;
+}
+
+.hero .logo {
+  height: 120px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.hero h1 {
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-shadow: 0 1.5px 1.5px #000;
+  color: white;
+  background: rgb(0,0,0); /* Fallback for older browsers without RGBA-support */
+  background: rgba(0,0,0, 0.5);
+  line-height: 50px;
+}
+
+.forms {
+  padding-top: 4ex;
+}
+
+.forms .row {
+  margin-bottom: 2ex;
+}
+
+.contest-card {
+
+}
+
+.contest-description {
+  font-size: 10pt;
+  color: #666;
+  margin-bottom: 1ex;
+}
+
+.contest-description .contestants {
+  font-weight: bold;
+  float: right;
+}
+
+.contest-picture {
+  position: relative;
+  margin-bottom: 2ex;
+}
+
+.contest-picture .contest-participants {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  padding-left: 1em;
+  padding-right: .8em;
+  line-height: 16pt;
+  font-size: 10pt;
+  font-weight: bold;
+  background: rgba(238, 26, 38, 0.8);
+  color: white;
+  text-shadow: 0 .5px .5px #000;
+}
+
+.contest-picture .pic {
+  height: 170px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#contestCounter {
+  float: right;
+  font-style: italic;
+  color: #606060;
+}
+
+.launch-wrapper {
+  padding-top: 4ex;
+}
+
+.winners {
+  padding-top: 2ex;
+}
+
+#winner .card {
+  background-color: #eee;
+  /* width: 400px; */
+  padding: 1em;
+}
+
+#winner .card .img-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  /* float: left; */
+}
+
+#winner .card img {
+  height: 100%;
+  width: auto;
+}
+
+#winner .card h2 {
+  text-shadow: 0 1px 1px white;
+  margin: 1ex auto;
+}
+
+#winner .card .sponsor-search {
+
+}
+
+.btn:focus {
+  outline: none !important;
+}
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  /* cursor:progress; */
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
